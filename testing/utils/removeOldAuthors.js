@@ -2,7 +2,6 @@ const removeOldAuthors = (data) => {
   const modifiedBooks = data.filter((book) => {
     return book.authors.every((author) => checkYear(author.death_year));
   });
-  console.log(modifiedBooks);
   return modifiedBooks;
 };
 

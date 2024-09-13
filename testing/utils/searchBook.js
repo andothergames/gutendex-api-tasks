@@ -11,7 +11,6 @@ const searchBook = async (url, title) => {
     if (!data.next) {
       return null;
     }
-    console.log(searchBook);
     return searchBook(data.next, title);
   } catch (error) {
     console.log("Could not find book", error);

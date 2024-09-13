@@ -6,7 +6,7 @@ import {
   searchBook,
 } from "./functionsForDOM.js";
 
-console.log("hello");
+console.log("Hello! Welcome to the console");
 let data;
 
 //fetchBooks show Books Button
@@ -47,11 +47,6 @@ removeAuthorsButton.addEventListener("click", function () {
 //search For a title
 const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", async function () {
-  if (!data) {
-    console.error("Please click show books first and then search again.");
-    return;
-  }
-  console.log("Loading...");
   const searchTerm = document.getElementById("search-term").value;
   const foundBook = await searchBook("https://gutendex.com/books", searchTerm);
 });

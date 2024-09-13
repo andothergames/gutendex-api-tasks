@@ -5,7 +5,6 @@ const modifySubjects = (data) => {
       subjects: book.subjects.map((subject) => subject.toUpperCase()),
     };
   });
-  console.log(modifiedBooks);
   return modifiedBooks;
 };
 
