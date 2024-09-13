@@ -4,22 +4,19 @@ const gutendexAPI = axios.create({
   baseURL: "https://gutendex.com",
 });
 
-const fetchBooks = () => {
-  return gutendexAPI.get("/books").then((res) => {
-    return res.data;
-  });
+const fetchBooks = async () => {
+  const res = await gutendexAPI.get("/books");
+  return res.data;
 };
 
-const fetchNextBooks = (url) => {
-  return axios.get(url).then((res) => {
-    return res.data;
-  });
+const fetchNextBooks = async (url) => {
+  const res = await axios.get(url);
+  return res.data;
 };
 
-const fetchBooksSortedByID = (order) => {
-  return gutendexAPI.get(`/books?sort=${order}`).then((res) => {
-    return res.data;
-  });
+const fetchBooksSortedByID = async (order) => {
+  const res = await gutendexAPI.get(`/books?sort=${order}`);
+  return res.data;
 };
 
 module.exports = { fetchBooks, fetchNextBooks, fetchBooksSortedByID };
