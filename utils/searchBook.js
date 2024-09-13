@@ -1,7 +1,8 @@
 const { fetchNextBooks } = require("../api");
 
-const searchBook = (url, title) => {
-  return fetchNextBooks(url).then((data) => {
+const searchBook = async (url, title) => {
+  try {
+    const data = await fetchNextBooks(url);
     const foundBook = data.results.find((book) => book.title === title);
 
     if (foundBook) {
@@ -10,10 +11,11 @@ const searchBook = (url, title) => {
     if (!data.next) {
       return null;
     }
-    if(!foundBook) {
-      return searchBook(data.next, title);
-    }
-  });
+    return searchBook(data.next, title);
+  } catch (error) {
+    console.log("Could not find book", error);
+    return null;
+  }
 };
 
 module.exports = { searchBook };
