@@ -2,6 +2,7 @@ const { fetchBooks } = require("../api");
 const { sortByID } = require("../utils/sortByID");
 const { modifySubjects } = require("../utils/modifySubjects");
 const { removeOldAuthors } = require("../utils/removeOldAuthors");
+const { searchBook } = require("../utils/searchBook")
 
 describe("sortByID", () => {
   test("sorts books by ID", () => {
@@ -25,7 +26,7 @@ describe("modifySubjects", () => {
       expect(originalBooks).toEqual(originalBooks);
     });
   });
-  test("returns modifed books with capitalised subjects", () => {
+  test("returns modified books with capitalised subjects", () => {
     return fetchBooks().then((data) => {
       const modifedBooks = modifySubjects(data.results);
       modifedBooks.forEach((book) => {
@@ -46,7 +47,7 @@ describe("removeOldAuthors", () => {
       expect(originalBooks).toEqual(originalBooks);
     });
   });
-  test.only("returns books whose authors existed in the last 200 years", () => {
+  test("returns books whose authors existed in the last 200 years", () => {
     return fetchBooks().then((data) => {
       const modifedBooks = removeOldAuthors(data.results);
       modifedBooks.forEach((book) => {
@@ -57,3 +58,15 @@ describe("removeOldAuthors", () => {
     });
   });
 });
+
+describe("searchBook", () => {
+  test.only("searches entire API for specific book title", () => {
+    const title = "Short Stories";
+    const author = "Dostoyevsky, Fyodor";
+    searchBook("https://gutendex.com/books", title).then((data) => {
+      expect(data.title).toBe(title);
+      expect(data.authors[0].name).toBe(author);
+    });
+  });
+});
+
