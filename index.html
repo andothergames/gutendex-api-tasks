@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Gutendex API Tasks</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Tech Test using Gutendex API">
-    <meta name="keywords"
-        content="Books">
-    <meta name="author" content="andothergames">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="stylesheet" href="style.css"> -->
-</head>
-<body>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Tech Test using Gutendex API" />
+    <meta name="keywords" content="Books" />
+    <meta name="author" content="andothergames" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
     <h1>Gutendex API Tasks</h1>
-</body>
+    <main>
+      <p>
+        Please begin by populating the first page of books by clicking 'Show me
+        the books!'
+      </p>
+      <p>For now, please open the console log to see the results :)</p>
+      <section id="interactions">
+        <div>
+          <label for="books"
+            ><p>Want to see some books?</p>
+            <button type="button" id="books-button">Show me the books!</button>
+          </label>
+        </div>
+        <div>
+          <label for="order"
+            ><p>Order them by ID:</p>
+            <button type="button" id="order-button">Order!</button>
+          </label>
+        </div>
+        <div>
+          <label for="modify"
+            ><p>Capitalise and modify the Subjects:</p>
+            <button type="button" id="modify-button">Capitalise!</button>
+          </label>
+        </div>
+        <div>
+          <label for="remove"
+            ><p>Remove authors that didn't exist 200 years ago:</p>
+            <button type="button" id="remove-authors-button">
+              Goodbye Authors!
+            </button>
+          </label>
+        </div>
+        <div>
+          <label for="search"
+            ><p>Search for a book title:</p>
+            <input id="search-term" type="text" />
+            <button type="button" id="search-button">Search</button>
+          </label>
+        </div>
+      </section>
+
+      <section id="books"></section>
+    </main>
+
+    <script src="app.js" type="module"></script>
+  </body>
 </html>
