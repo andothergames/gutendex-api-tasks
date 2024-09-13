@@ -10,10 +10,16 @@ const fetchBooks = () => {
   });
 };
 
+const fetchNextBooks = (url) => {
+  return axios.get(url).then((res) => {
+    return res.data;
+  });
+};
+
 const fetchBooksSortedByID = (order) => {
   return gutendexAPI.get(`/books?sort=${order}`).then((res) => {
     return res.data;
   });
 };
 
-module.exports = { fetchBooks, fetchBooksSortedByID };
+module.exports = { fetchBooks, fetchNextBooks, fetchBooksSortedByID };
