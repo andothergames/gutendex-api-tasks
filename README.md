@@ -4,9 +4,9 @@
 
 This project is a tech test utilising the [Gutendex API](https://gutendex.com/)
 
-I hosted the site using [GitHub Pages](https://andothergames.github.io/gutendex-api-tasks/)
+[Hosted Site](https://andothergames.github.io/gutendex-api-tasks/)
 
-I used Google Docs for [Planning and Note-taking](https://docs.google.com/document/d/1s6dUJoC_PamVHce_rr6WGWdPniwX-LYPluaiY1ouiis/edit?usp=sharing)
+[My Plan and Notes](https://docs.google.com/document/d/1s6dUJoC_PamVHce_rr6WGWdPniwX-LYPluaiY1ouiis/edit?usp=sharing)
 
 
 ---
@@ -29,15 +29,11 @@ Install dependencies from the base folder
 
 `npm i`
 
-Enter the testing folder
-
-`cd testing`
-
 `npm test`
 
-(I am skipping two tests at the moment, one as Jest times out (but the function does work when tested with console logs) and one due to inaccuraccies with the API order by descending)
+(I am skipping two tests at the moment, one as Jest times out (but the function does work when tested with console logs) and one due to inaccuracies with the API order by descending)
 
-<img src="https://github.com/andothergames/gutendex-api-tasks/blob/main/screenshots/gutendexTesting.png?raw=true?" width="300">
+<img src="https://github.com/andothergames/gutendex-api-tasks/blob/main/screenshots/gutendexTesting.png?raw=true?" width="400">
 
 
 --- 
@@ -53,7 +49,7 @@ This project was built with:
 
 ---
 
-<img src="https://github.com/andothergames/gutendex-api-tasks/blob/main/screenshots/gutendexScreenshot.png?raw=true" width="300">
+<img src="https://github.com/andothergames/gutendex-api-tasks/blob/main/screenshots/gutendexScreenshot.png?raw=true" width="600">
 
 ---
-<img src="https://github.com/andothergames/gutendex-api-tasks/blob/main/screenshots/gutendexConsole.png?raw=true" width="300">
+<img src="https://github.com/andothergames/gutendex-api-tasks/blob/main/screenshots/gutendexConsole.png?raw=true" width="400">
